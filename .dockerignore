@@ -1,0 +1,4 @@
+*node_moudles/**/*
+build/**/*
+.DS_Store
+
