@@ -4,7 +4,7 @@ WORKDIR /frontend
 
 COPY ./package.json /frontend/package.json
 
-RUN yarn
+RUN yarn --ignore-engines
 
 COPY . /frontend/
 
