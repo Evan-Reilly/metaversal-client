@@ -30,7 +30,7 @@ function FileUploadPage(){
         // loads, we parse it and set the data.
         reader.onload = async ({ target }) => {
 			await axios.post(`http://cidra1.fyre.ibm.com:4000/v1/bucket/create-text-file`, {
-				bucketName: "metaversal",
+				bucketName: "mv-objectstorage",
 				itemName: selectedFile.name,
 				fileText: target.result,
 			}, {
@@ -47,7 +47,7 @@ function FileUploadPage(){
 		var text = reader.readAsText(selectedFile);
 		console.log("reader.readAsText: ", text);
 		const accessToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MzlhMjBmYzMyNGM1YzAxNjQxMGY4M2UiLCJpYXQiOjE2NzM5MDU3ODUsImV4cCI6MTY3MzkwNzU4NSwidHlwZSI6ImFjY2VzcyJ9.tmfl7NkyDdpvWUEASJjAABUoTWGGEwFBB3SuYCDqzCQ";
-	
+
 	};
 
     return (
